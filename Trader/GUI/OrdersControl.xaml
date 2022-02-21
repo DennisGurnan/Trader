@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="Trader.GUI.OrdersControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Trader.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DataGrid x:Name="OrdersGrid" ItemsSource="{Binding Orders, Mode=OneWay}" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="Auto" Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Width="Auto" Header="Статус" Binding="{Binding Status}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="ExecutionReportStatusNew">
+                                    <Setter Property="Background" Value="Aqua"/>
+                                </Trigger>
+                                <Trigger Property="Text" Value="ExecutionReportStatusFill">
+                                    <Setter Property="Background" Value="LightGreen"/>
+                                </Trigger>
+                                <Trigger Property="Text" Value="ExecutionReportStatusCancelled">
+                                    <Setter Property="Background" Value="Tomato"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="Auto" Header="Запорс" Binding="{Binding LotsRequested}"/>
+                <DataGridTextColumn Width="Auto" Header="Выполнено" Binding="{Binding LotsExecuted}"/>
+                <DataGridTextColumn Width="Auto" Header="Начальная цена" Binding="{Binding InitialOrderPrice, StringFormat=N2}"/>
+                <DataGridTextColumn Width="Auto" Header="Цена исполнения" Binding="{Binding ExecutedOrderPrice, StringFormat=N2}"/>
+                <DataGridTextColumn Width="Auto" Header="Позиция" Binding="{Binding AveragePositionPrice, StringFormat=N2}"/>
+                <DataGridTextColumn Width="Auto" Header="Всего" Binding="{Binding TotalOrderAmount, StringFormat=N2}"/>
+                <DataGridTextColumn Width="Auto" Header="Начальная комиссия" Binding="{Binding InitialCommission, StringFormat=N2}"/>
+                <DataGridTextColumn Width="Auto" Header="Начислено комиссия" Binding="{Binding ExecutedCommission, StringFormat=N2}"/>
+                <DataGridTextColumn Width="Auto" Header="ACI" Binding="{Binding AciValue, StringFormat=N2}"/>
+                <DataGridTextColumn Width="Auto" Header="Направление" Binding="{Binding Direction}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="Sell">
+                                    <Setter Property="Background" Value="LightCoral"/>
+                                </Trigger>
+                                <Trigger Property="Text" Value="Buy">
+                                    <Setter Property="Background" Value="LightGreen"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="Auto" Header="Защита" Binding="{Binding InitialSecurityPrice, StringFormat=N2}"/>
+                <DataGridTextColumn Width="Auto" Header="Комиссия сервиса" Binding="{Binding ServiceCommission, StringFormat=N2}"/>
+                <DataGridTextColumn Width="Auto" Header="Инфо" Binding="{Binding LastMessage}"/>
+                <DataGridTextColumn Width="Auto" Header="$" Binding="{Binding Currency}"/>
+                <DataGridTextColumn Width="Auto" Header="Тип" Binding="{Binding Type}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="Market">
+                                    <Setter Property="Background" Value="LightPink"/>
+                                </Trigger>
+                                <Trigger Property="Text" Value="Limit">
+                                    <Setter Property="Background" Value="LightSkyBlue"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="Auto" Header="Начато" Binding="{Binding Date}"/>
+                <DataGridTextColumn Width="Auto" Header="Отмена" Binding="{Binding CanseledTime}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

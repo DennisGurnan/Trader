@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Trader.Entities.TAccount">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACIAAFIAAAAgQAAABAAEQAAAAAAAEAAQAAAAAABAA=</HashCode>
+      <FileName>Entities\TAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.MVVM.ObservableObject">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\ObservableObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Trader.Entities.TAccounts">
+    <Position X="1.5" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="Trader.Entities.TAccounts.MyHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Entities\TAccounts.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAQAAAAAAAAAAAAAAECAAAQAACAEEAgAAgAA=</HashCode>
+      <FileName>Entities\TAccounts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.GUI.AccountsControl">
+    <Position X="10.25" Y="0.75" Width="2.75" />
+    <NestedTypes>
+      <Delegate Name="Trader.GUI.AccountsControl.AccountsHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>GUI\AccountsControl.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAQAAAAAAEIMAARAAQAFAAAAgAAA=</HashCode>
+      <FileName>GUI\AccountsControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

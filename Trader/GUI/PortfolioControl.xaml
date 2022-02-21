@@ -1,0 +1,138 @@
+﻿<UserControl x:Class="Trader.GUI.PortfolioControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Trader.GUI"
+             xmlns:c="clr-namespace:Trader.ViewModels" xmlns:entities="clr-namespace:Trader.Entities" d:DataContext="{d:DesignInstance Type=entities:TPositions}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Свободные деньги" Background="LightGreen"/>
+            <TextBox Grid.Column="1" Text="{Binding Positions.MoneyView, Mode=OneWay}" IsReadOnly="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="LightGreen"/>
+            <Label Content="Заблокированно" Grid.Column="2" Background="Tomato"/>
+            <TextBox Grid.Column="3" Text="{Binding Positions.BlockedView, Mode=OneWay}" IsReadOnly="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Tomato"/>
+            <Label Content="Под фьючерсы" Grid.Column="4" Background="LightBlue"/>
+            <TextBox Grid.Column="5" Text="{Binding Positions.BlockedGuaranteeView, Mode=OneWay}" IsReadOnly="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="LightBlue"/>
+        </Grid>
+        <Grid Background="#FFE5E5E5" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" MaxWidth="300"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <GridSplitter Grid.Column="1" HorizontalAlignment="Center" Width="5"  VerticalAlignment="Stretch"/>
+            <GridSplitter Grid.Column="3" HorizontalAlignment="Center" Width="5"  VerticalAlignment="Stretch"/>
+            <GroupBox Header="Общая статистика" Grid.Column="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="136"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Стоимость акций" Height="24" Margin="0,-4,0,0" Grid.Column="0" Grid.Row="0"/>
+                    <Label Content="{Binding Positions.TotalAmountShares, Mode=OneWay}" ContentStringFormat="N2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Grid.Column="1" Grid.Row="0"/>
+                    <Label Content="Стоимость облигаций" Height="24" Margin="0,-4,0,0" Grid.Column="0" Grid.Row="1"/>
+                    <Label Content="{Binding Positions.TotalAmountBonds}" ContentStringFormat="N2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Grid.Column="1" Grid.Row="1"/>
+                    <Label Content="Стоимость фондов" Height="24" Margin="0,-4,0,0" Grid.Column="0" Grid.Row="2"/>
+                    <Label Content="{Binding Positions.TotalAmountEtf}" ContentStringFormat="N2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Grid.Column="1" Grid.Row="2"/>
+                    <Label Content="Стоимость валют" Height="24" Margin="0,-4,0,0" Grid.Column="0" Grid.Row="3"/>
+                    <Label Content="{Binding Positions.TotalAmountCurrencies}" ContentStringFormat="N2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Grid.Column="1" Grid.Row="3"/>
+                    <Label Content="Стоимость фьючерсов" Height="24" Margin="0,-4,0,0" Grid.Column="0" Grid.Row="4"/>
+                    <Label Content="{Binding Positions.TotalAmountFutures}" ContentStringFormat="N2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Grid.Column="1" Grid.Row="4"/>
+                    <Label Content="Текущая доходность %" Height="24" Margin="0,-4,0,0" Grid.Column="0" Grid.Row="5"/>
+                    <Label Content="{Binding Positions.ExpectedYield}" ContentStringFormat="p2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Grid.Column="1" Grid.Row="5"/>
+                    <Label Content="Вложения всего" Height="24" Margin="0,-4,0,0" Grid.Column="0" Grid.Row="6"/>
+                    <Label Content="{Binding Positions.AllPaysView}" ContentStringFormat="N2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Grid.Column="1" Grid.Row="6"/>
+                    <Label Content="Текущая всего" Height="24" Margin="0,-4,0,0" Grid.Column="0" Grid.Row="7"/>
+                    <Label Content="{Binding Positions.CurrentPayAll}" ContentStringFormat="N2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Grid.Column="1" Grid.Row="7"/>
+                    <Label Content="Доход" Height="24" Margin="0,-4,0,0" Grid.Column="0" Grid.Row="8"/>
+                    <Label Content="{Binding Positions.AllGoodsView}" ContentStringFormat="N2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Grid.Column="1" Grid.Row="8"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Позиции общее" Grid.Column="2">
+                <DataGrid x:Name="portfolioPositions" ItemsSource="{Binding Positions, Mode=OneWay}" AutoGenerateColumns="false"  MouseDoubleClick="portfolioPositions_MouseDoubleClick"  IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Тип" Binding="{Binding InstrumentType}" MinWidth="51"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Тикер" Binding="{Binding Ticker}" MinWidth="51"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*" MinWidth="130"></DataGridTextColumn>
+                        <DataGridTextColumn Header="К-во" Binding="{Binding Quantity, StringFormat=0.########}" MinWidth="36"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Цена" Binding="{Binding AveragePositionPrice, StringFormat=N2}" MinWidth="45">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="Текущ." Binding="{Binding CurrentPrice, StringFormat=N2}" MinWidth="45">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="$" Binding="{Binding Currency}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Background" Value="{Binding Currency, Converter={c:CurrencyToValueConverter}}"/>
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="Стоимость" Binding="{Binding Cost, StringFormat=N2}" MinWidth="52">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="Текущая" Binding="{Binding FullCost, StringFormat=N2}" MinWidth="52">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="Доход" Binding="{Binding ExpectedYield, StringFormat=N2}"  MinWidth="45">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Background" Value="{Binding ExpectedYield, Converter={c:DecToValueConverter}}"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="%" Binding="{Binding ExpectedYieldPercent, StringFormat=N2}" MinWidth="36" MaxWidth="60">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="Background" Value="{Binding ExpectedYieldPercent, Converter={c:DecToValueConverter}}"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</UserControl>

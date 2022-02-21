@@ -1,0 +1,21 @@
+﻿<!-- CustomAnnotation, allows placing any UIElement inside an annotation with placement via a single X1 Y1 coordinate -->
+<!-- The BuyMarkerAnnotation displays a green arrow pointing up, with tooltip to bind to Trade data object -->
+<s:CustomAnnotation x:Class="Trader.ViewModels.Chart.Annotations.StepAnnotation" 
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:s="http://schemas.abtsoftware.co.uk/scichart" 
+                    VerticalAnchorPoint="Top" 
+                    HorizontalAnchorPoint="Center" 
+                    Margin="0,0,0,0"
+                    X1="{Binding X1}" 
+                    Y1="{Binding Y1}">
+
+    <Path Fill="#571CB6FF" Stroke="Gold" StrokeThickness="1">
+        <Path.Data>
+            <GeometryGroup>
+                <LineGeometry StartPoint="-5,0" EndPoint="5,0" />
+                <LineGeometry StartPoint="0,5" EndPoint="0,-5" />
+            </GeometryGroup>
+        </Path.Data>
+    </Path>
+</s:CustomAnnotation>

@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Trader.GUI.OperationsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Trader.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#FFE5E5E5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="Операция:" HorizontalAlignment="Left"  Margin="0,-4,0,0" Grid.Column="0"/>
+                <ComboBox x:Name="OperationSelector" ItemsSource="{Binding Operations.TypesList, Mode=OneWay}" Grid.Column="1" SelectionChanged="SelectorChanged"></ComboBox>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="Инструмент:" HorizontalAlignment="Left"  Margin="0,-4,0,0" Grid.Column="0"/>
+                <ComboBox x:Name="InstrumentSelector" ItemsSource="{Binding Operations.InstrumentsList, Mode=OneWay}" Grid.Column="1" SelectionChanged="SelectorChanged"></ComboBox>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="Тип:" HorizontalAlignment="Left" Margin="0,-4,0,0" Grid.Column="0"/>
+                <ComboBox x:Name="TypeSelector" ItemsSource="{Binding Operations.OperationsList, Mode=OneWay}" Grid.Column="1" SelectionChanged="SelectorChanged"></ComboBox>
+            </Grid>
+        </Grid>
+        <DataGrid x:Name="operationsGrid" ItemsSource="{Binding Operations.OperationsView, Mode=OneWay}" AutoGenerateColumns="False" Grid.Row="1" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Родитель" Binding="{Binding ParentOperationId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Date}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип" Binding="{Binding Type}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="К-во" Binding="{Binding Quantity}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Факт" Binding="{Binding QuantityRest}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price, StringFormat=N2}"></DataGridTextColumn>
+                <DataGridTextColumn Header="$" Binding="{Binding Currency}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding Payment, StringFormat=N2}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Инструмент" Binding="{Binding InstrumentName}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип инстр." Binding="{Binding InstrumentType}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип операции" Binding="{Binding OperationType}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

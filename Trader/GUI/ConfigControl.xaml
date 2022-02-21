@@ -1,0 +1,170 @@
+﻿<UserControl Name="configControl"
+             x:Class="Trader.GUI.ConfigControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Trader.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="300">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Сервера">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Активный сервер"/>
+                        <ComboBox x:Name="ServerSelector" SelectionChanged="ServerSelector_SelectionChanged" Grid.Column="1">
+                            <ComboBoxItem Content="Tinkoff"/>
+                        </ComboBox>
+                    </Grid>
+                    <GroupBox Header="Tinkoff" x:Name="gTinkoff" Height="Auto" Background="Azure" Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <GroupBox Header="Токены">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="110"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="Адрес сервера" Grid.Row="0" Grid.Column="0"/>
+                                    <TextBox x:Name="SUrl" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                                    <Label Content="Полный доступ" Grid.Row="1" Grid.Column="0"/>
+                                    <TextBox x:Name="FullAccess" Text="" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+                                    <RadioButton x:Name="rFullAccess" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2"/>
+                                    <Label Content="Только чтение" Grid.Row="2" Grid.Column="0"/>
+                                    <TextBox x:Name="ReadOnly" Text="" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+                                    <RadioButton x:Name="rReadOnly" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2"/>
+                                    <Label Content="Тестовый режим" Grid.Row="3" Grid.Column="0"/>
+                                    <TextBox x:Name="TestMode" Text="" VerticalContentAlignment="Center" Grid.Row="3" Grid.Column="1"/>
+                                    <RadioButton x:Name="rTestMode" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2"/>
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Binance" x:Name="gBinance" Height="Auto" Background="Azure" Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <GroupBox Header="Параметры">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="110"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="Адрес сервера" Grid.Row="0" Grid.Column="0"/>
+                                    <TextBox x:Name="ServerUrl" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                                    <Label Content="Сокет" Grid.Row="1" Grid.Column="0"/>
+                                    <TextBox x:Name="WebSocket" Text="" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+                                    <Label Content="Ключ API" Grid.Row="2" Grid.Column="0"/>
+                                    <TextBox x:Name="ApiKey" Text="" VerticalContentAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+                                    <Label Content="Секретный ключ" Grid.Row="3" Grid.Column="0"/>
+                                    <TextBox x:Name="SecretKey" Text="" VerticalContentAlignment="Center" Grid.Row="3" Grid.Column="1"/>
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Name="gTestServer" Header="Test Server" Height="Auto" Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="110"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Шаг(сек)"/>
+                            <TextBox x:Name="TestServerTiming" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+                        </Grid>
+                    </GroupBox>
+                    <Button Grid.Row="3" Content="Применить" Click="ServerApplyButton_Click" Background="Aquamarine"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Чарт">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="Основной график">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+
+                            </Grid.RowDefinitions>
+                            <Label Content="Нижняя линия" Grid.Row="0" Grid.Column="0"/>
+                            <TextBox Text="{Binding LoLine, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1"/>
+                            <Label Content="Верхняя линия" Grid.Row="1" Grid.Column="0"/>
+                            <TextBox Text="{Binding HiLine, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="MCAD" Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Медленный" Grid.Row="0" Grid.Column="0"/>
+                            <TextBox Text="{Binding MACDSlow, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1"/>
+                            <Label Content="Быстрый" Grid.Row="1" Grid.Column="0"/>
+                            <TextBox Text="{Binding MACDFast, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1"/>
+                            <Label Content="Сигнал" Grid.Row="2" Grid.Column="0"/>
+                            <TextBox Text="{Binding MACDSignal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="RSI" Grid.Row="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Период" Grid.Row="0" Grid.Column="0"/>
+                            <TextBox Text="{Binding RsiPeriod, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Эмулятор">
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

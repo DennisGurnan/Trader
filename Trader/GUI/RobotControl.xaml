@@ -1,0 +1,146 @@
+﻿<UserControl x:Class="Trader.GUI.RobotControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Trader.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!-- Область настроек робота -->
+        <GroupBox Header="Настройки" Grid.Column="0" Background="AntiqueWhite">
+            <!-- Сетка групбоксов настроек -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <!-- Настройки эмуляции расчетов -->
+                <GroupBox Header="Эмулятор" Grid.Row="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <!-- Текущее время -->
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Текущее время" Background="LightYellow" FontWeight="Bold" Grid.Column="0"/>
+                            <Label Content="{Binding CurrentDate}" ContentStringFormat="HH:mm dd/mm/yyyy" Background="LightYellow" FontWeight="ExtraBold" HorizontalContentAlignment="Right" Grid.Column="1"/>
+                        </Grid>
+                        <!-- Настройки и кнопки эмулятора -->
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Старт:" FontWeight="ExtraBold" Background="AliceBlue" Grid.Column="0"/>
+                            <Label Content="Дата" Background="AliceBlue" Grid.Column="1"/>
+                            <DatePicker SelectedDate="{Binding StartDate, Mode=TwoWay, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" Background="AliceBlue" Grid.Column="2" />
+                            <Label Content="Время" Background="AliceBlue" Grid.Column="3"/>
+                            <TextBox Text="{Binding StartTime, Mode=TwoWay, NotifyOnTargetUpdated=True,NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="AliceBlue" Grid.Column="4"/>
+                            <Button x:Name="StepButton" Background="LightGreen" Content="Шаг" Click="StepButton_Click" Grid.Column="5"/>
+                            <Button x:Name="CalculateButton" Background="LightGoldenrodYellow" Content="Расчет" Click="CalculateButton_Click" Grid.Column="6" />
+                            <Button x:Name="ResetButton" Background="LightCoral" Content="Сброс" Click="ResetButton_Click" Grid.Column="7" />
+                        </Grid>
+                    </Grid>
+                </GroupBox>
+                <!-- Входящие параметры -->
+                <GroupBox Header="Входящие условия" Grid.Row="1">
+                    <!-- Таблица в 2 колонки и много строк -->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <!-- Линия 0 -->
+                        <Label Content="Цикл расчета(сек)" Grid.Column="0" Grid.Row="0"/>
+                        <TextBox x:Name="CicleTiming" Text="{Binding EmulationTiming, Mode=TwoWay}" Grid.Column="1" Grid.Row="0"/>
+                        <!-- Линия 1 -->
+                        <!-- Линия 2 -->
+                        <!-- Линия 3 -->
+                        <!-- Линия 4 -->
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+        <!-- Область просмотра состояний Робота -->
+        <GroupBox Header="Состояние" Grid.Column="1" Background="LightSkyBlue">
+            <!-- 2 Колонки состояний -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!-- Первая колонка состояний -->
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!-- Линия 0 -->
+                    <Label Content="Figi" Background="LightGray" Grid.Column="0" Grid.Row="0"/>
+                    <Label  Content="{Binding currentFigi, Mode=OneWay}"  Background="LightGray" FontWeight="Bold" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="0"/>
+                    <!-- Линия 1 -->
+                    <Label Content="RSI" Background="LightGray" Grid.Column="0" Grid.Row="1"/>
+                    <Label  Content="{Binding currentRsi, Mode=OneWay}"  Background="LightGray" FontWeight="Bold" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="1"/>
+                    <!-- Линия 2 -->
+                    <Label Content="Volume" Background="LightGray" Grid.Column="0" Grid.Row="2"/>
+                    <Label  Content="{Binding currentVolume, Mode=OneWay}"  Background="LightGray" FontWeight="Bold" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="2"/>
+                    <!-- Линия 3 -->
+                    <Label Content="High" Background="LightGray" Grid.Column="0" Grid.Row="3"/>
+                    <Label  Content="{Binding currentHiVal, Mode=OneWay}"  Background="LightGray" FontWeight="Bold" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="3"/>
+                    <!-- Линия 4 -->
+                    <Label Content="Low" Background="LightGray" Grid.Column="0" Grid.Row="4"/>
+                    <Label  Content="{Binding currentLowVal, Mode=OneWay}"  Background="LightGray" FontWeight="Bold" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="4"/>
+                </Grid>
+                <!-- Вторая колонка состояний -->
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Деньги" Background="LightGray" Grid.Column="0" Grid.Row="0"/>
+                    <Label Content="Крипто" Background="LightGray" Grid.Column="0" Grid.Row="1"/>
+                    <Label Content="Профит" Background="LightGray" Grid.Column="0" Grid.Row="2"/>
+                    <Label Content="Состояние" Background="LightGray" Grid.Column="0" Grid.Row="3"/>
+                    <Label  Content="{Binding Money, Mode=OneWay}"  Background="LightGray" FontWeight="Bold" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="0"/>
+                    <Label  Content="{Binding Cripto, Mode=OneWay}"  Background="LightGray" FontWeight="Bold" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="1"/>
+                    <Label  Content="{Binding Profit, Mode=OneWay}"  Background="LightGray" FontWeight="Bold" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="2"/>
+                    <Label  Content="{Binding State, Mode=OneWay}"  Background="LightGray" FontWeight="Bold" HorizontalContentAlignment="Right" Grid.Column="1" Grid.Row="3"/>
+                </Grid>
+            </Grid>
+        </GroupBox> 
+    </Grid>
+</UserControl>

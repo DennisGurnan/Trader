@@ -1,0 +1,148 @@
+﻿<UserControl x:Class="Trader.GUI.TradesControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:s="http://schemas.abtsoftware.co.uk/scichart" 
+             xmlns:local="clr-namespace:Trader.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.Resources>
+                <local:TradesNumericLabelAsksProvider x:Key="LabelAsksProvider"/>
+                <local:TradesNumericLabelBidsProvider x:Key="LabelBidsProvider"/>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Asks -->
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!-- Asks Surface -->
+                <s:SciChartSurface x:Name="sciChartAsks" Grid.Column="1" Padding="0" BorderThickness="0" MouseLeftButtonUp="SciChart_MouseLeftButtonUp">
+                    <s:SciChartSurface.RenderableSeries>
+                        <s:FastColumnRenderableSeries x:Name="asksColumnSeries" DataPointWidth="0.5" Stroke="Red"
+                                                  UseUniformWidth="False"
+                                                  XAxisId="XAxisRightAsks"
+                                                  YAxisId="YAxisBottomAsks">
+                            <s:FastColumnRenderableSeries.Fill>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Offset="0" Color="Red"/>
+                                    <GradientStop Offset="1.0" Color="IndianRed"/>
+                                </LinearGradientBrush>
+                            </s:FastColumnRenderableSeries.Fill>
+                        </s:FastColumnRenderableSeries>
+                    </s:SciChartSurface.RenderableSeries>
+                    <!-- X Axis -->
+                    <s:SciChartSurface.XAxis>
+                        <s:NumericAxis Id="XAxisRightAsks"
+                                   AutoTicks="false" MajorDelta="1" MinorDelta="1" MinorsPerMajor="1"
+                                   AxisTitle="Цена/Объем" DrawMajorBands="true" AxisAlignment="Right"
+                                   IsPrimaryAxis="True" FlipCoordinates="True" IsLabelCullingEnabled="False"
+                                   LabelProvider="{StaticResource LabelAsksProvider}"/>
+                    </s:SciChartSurface.XAxis>
+                    <!-- Y Axis -->
+                    <s:SciChartSurface.YAxis>
+                        <s:NumericAxis Id="YAxisBottomAsks" AxisTitle="Объем" GrowBy="0,0.1" DrawMajorBands="false"
+                                   AxisAlignment="Bottom"/>
+                    </s:SciChartSurface.YAxis>
+                    <s:SciChartSurface.ChartModifier>
+                        <s:ZoomExtentsModifier/>
+                    </s:SciChartSurface.ChartModifier>
+                </s:SciChartSurface>
+            </Grid>
+            <!-- Bids -->
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!-- Asks Surface -->
+                <s:SciChartSurface x:Name="sciChartBids" Grid.Column="1" Padding="0" BorderThickness="0" MouseLeftButtonUp="SciChart_MouseLeftButtonUp">
+                    <s:SciChartSurface.RenderableSeries>
+                        <s:FastColumnRenderableSeries x:Name="bidsColumnSeries" DataPointWidth="0.5" Stroke="DarkGreen"
+                                                  UseUniformWidth="False"
+                                                  XAxisId="XAxisRightBids"
+                                                  YAxisId="YAxisBottomBids">
+                            <s:FastColumnRenderableSeries.Fill>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Offset="0" Color="Green"/>
+                                    <GradientStop Offset="1.0" Color="LightGreen"/>
+                                </LinearGradientBrush>
+                            </s:FastColumnRenderableSeries.Fill>
+                        </s:FastColumnRenderableSeries>
+                    </s:SciChartSurface.RenderableSeries>
+                    <s:SciChartSurface.XAxis>
+                        <s:NumericAxis Id="XAxisRightBids"
+                                   AutoTicks="false" MajorDelta="1" MinorDelta="1" MinorsPerMajor="1"
+                                   AxisTitle="Цена/Объем" DrawMajorBands="true" AxisAlignment="Left"
+                                   IsPrimaryAxis="True" FlipCoordinates="False" IsLabelCullingEnabled="False"
+                                    LabelProvider="{StaticResource LabelBidsProvider}"/>
+                    </s:SciChartSurface.XAxis>
+                    <s:SciChartSurface.YAxis>
+                        <s:NumericAxis Id="YAxisBottomBids" AxisTitle="Объем" GrowBy="0,0.1" DrawMajorBands="false"
+                                   AxisAlignment="Bottom" FlipCoordinates="True"/>
+                    </s:SciChartSurface.YAxis>
+                    <s:SciChartSurface.ChartModifier>
+                        <s:ZoomExtentsModifier/>
+                    </s:SciChartSurface.ChartModifier>
+                </s:SciChartSurface>
+            </Grid>
+        </Grid>
+        <!-- Ручное управление -->
+        <Grid Grid.Row="1" VerticalAlignment="Bottom" Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="InstStatus" Content="Статус инструмента" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" Background="Bisque"/>
+            <Button x:Name="BayMarketButton" Content="Купить по рынку" Click="BayMarketButton_Click"  Grid.Column="0" Grid.Row="1"  Background="LawnGreen"/>
+            <Button x:Name="SellMarketButton" Content="Продать по рынку" Click="SellMarketButton_Click"  Grid.Column="2" Grid.Row="1" Background="Tomato"/>
+            <Button x:Name="BayLimitButton" Content="Купить лимит" Click="BayLimitButton_Click"  Grid.Column="0" Grid.Row="2" Background="LightGreen"/>
+            <Button x:Name="SellLimitButton" Content="Продать лимит" Click="SellLimitButton_Click"  Grid.Column="2" Grid.Row="2"  Background="LightCoral"/>
+            <Label Content="Глубина" Grid.Column="0" Grid.Row="3"/>
+            <ComboBox x:Name="glassDepth" 
+                      Grid.Column="1" Grid.Row="3" 
+                      SelectionChanged="GlassDepth_SelectionChanged"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <ComboBoxItem Content="10" Selector.IsSelected="true"/>
+                <ComboBoxItem Content="20"/>
+                <ComboBoxItem Content="30"/>
+                <ComboBoxItem Content="40"/>
+                <ComboBoxItem Content="50"/>
+            </ComboBox>
+            <Button x:Name="ReturnLimitsButton" Content="Отозвать лимиты" Click="ReturnLimitsButton_Click"  Grid.Column="2" Grid.Row="3" Background="CadetBlue"/>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Обьем" HorizontalContentAlignment="Center" Grid.Column="0" Background="Orange"/>
+                <TextBox x:Name="GlassQuantity" Text="1" TextAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1"/>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Content="Цена" HorizontalContentAlignment="Center" Grid.Column="0" Background="BurlyWood"/>
+                <TextBox x:Name="GlassPrice" Text="0" TextAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

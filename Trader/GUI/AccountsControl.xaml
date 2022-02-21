@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Trader.GUI.AccountsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Trader.GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Height="22" x:Name="ButtonsBar">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="AddAccountButton" Content="+" Width="22" Click="AddAccountButton_Click"  Grid.Column="0" Background="GreenYellow" />
+            <Button x:Name="DeleteAccountButton" Content="-" Width="22" Click="DeleteAccountButton_Click"  Grid.Column="1" IsEnabled="False" Background="Tomato"/>
+            <Label Content="Закинуть денег:" Background="LightBlue" Margin="0,-4,0,0" Grid.Column="3"/>
+            <TextBox x:Name="feeMany" Width="100" Grid.Column="4" Background="Beige"/>
+            <ComboBox x:Name="Curency" Width="50" Grid.Column="5">
+                <ComboBoxItem Content="rub" IsSelected="True" Background="Tomato"/>
+                <ComboBoxItem Content="usd" Background="LightGreen"/>
+                <ComboBoxItem Content="eur" Background="LightBlue"/>
+            </ComboBox>
+            <Button x:Name="AddMoneyButton" Content="+" Width="22" Grid.Column="6" IsEnabled="False" Click="AddMoneyButton_Click" Background="Beige"/>
+        </Grid>
+        <DataGrid x:Name="accountsGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="accountsGrid_MouseDoubleClick"  SelectionChanged="accountsGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Тип" Binding="{Binding Type}"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status}"/>
+                <DataGridTextColumn Header="Дата открытия" Binding="{Binding OpenedDate}"/>
+                <DataGridTextColumn Header="Дата закрытия" Binding="{Binding ClosedDate}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

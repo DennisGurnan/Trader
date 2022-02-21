@@ -1,0 +1,1669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Trader.App" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Config" Collapsed="true">
+    <Position X="24" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAACAAAAAgAAAAAgAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.Entities.TAccount">
+    <Position X="3.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAFIAAAAgQAAABAAEQAAAAAAAEAAQAAAAAABAA=</HashCode>
+      <FileName>Entities\TAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TAccounts" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAQAAAAAQAAAAAAAAkCBAAQAACAEEAgAAgAA=</HashCode>
+      <FileName>Entities\TAccounts.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.Entities.TCandelsGroup" Collapsed="true">
+    <Position X="11.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAABAABAAAQEEAAAAAAA=</HashCode>
+      <FileName>Entities\TCandelsGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TCandle" Collapsed="true">
+    <Position X="13.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Entities\TCandle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TCandlesGroupsManager" Collapsed="true">
+    <Position X="15.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAIEAAAEAAA=</HashCode>
+      <FileName>Entities\TCandlesGroupsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TInstrument" Collapsed="true">
+    <Position X="20.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oIIAIgAACCQwSQAGJAggMhQgaZhBgCEgxMAUgAkAgQM=</HashCode>
+      <FileName>Entities\TInstrument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TInstruments" Collapsed="true">
+    <Position X="22.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIABAAAAAQAAEAAAAAAAAAAAAAAAAAAEAAAAAIA=</HashCode>
+      <FileName>Entities\TInstruments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TOperation" Collapsed="true">
+    <Position X="24" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAQAAAAAAAIAAIAAACgBAAAABAUBAhAAAAAA=</HashCode>
+      <FileName>Entities\TOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TOperations" Collapsed="true">
+    <Position X="25.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAQAAAAAAAAAAACAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Entities\TOperations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TOrderStage" Collapsed="true">
+    <Position X="31" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQA=</HashCode>
+      <FileName>Entities\TOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TOrder" Collapsed="true">
+    <Position X="27.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBCEAAEAIIABAAARCAAAQAACQDAAAEFAQgAAAAAAAA=</HashCode>
+      <FileName>Entities\TOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TOrders" Collapsed="true">
+    <Position X="29.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQIBAAAEgAAAAAAIAQCAAAAAAAAAEAAACAAA=</HashCode>
+      <FileName>Entities\TOrders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TPortfolio" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAgCAAAAFAAAAEAABBAAA=</HashCode>
+      <FileName>Entities\TPortfolio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Entities.TPosition" Collapsed="true">
+    <Position X="32.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAACACAAAAAAAAAgAABAAA=</HashCode>
+      <FileName>Entities\TPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.GUI.AccountsControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAQAAAAAAEIMAARAAQAFAAAAgAAA=</HashCode>
+      <FileName>GUI\AccountsControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.GUI.ChartControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAQAAAAAAAAABAAAAAQCAgAIgAABA=</HashCode>
+      <FileName>GUI\ChartControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.GUI.ConfigControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAQAAEEAAAAAAIABAAAQAgkAAEAAAYQAAAAJAAAA=</HashCode>
+      <FileName>GUI\ConfigControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.GUI.InstrumentsControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QARAAIiAAAABABAAAAAAAgEAAQAEBAAAQAEEAABACAI=</HashCode>
+      <FileName>GUI\InstrumentsControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.GUI.LogItem" Collapsed="true">
+    <Position X="29.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAQA=</HashCode>
+      <FileName>GUI\LogControl.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.GUI.LogViewer" Collapsed="true">
+    <Position X="31" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\LogControl.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.GUI.LogControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAAAAAAACAAAAAEAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\LogControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.GUI.OperationsControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEIACAAAAAAAAAAAAAAAAAwAAAAAAQIEAAABAAAA=</HashCode>
+      <FileName>GUI\OperationsControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.GUI.OrdersControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAABAIBAAAEAAAAAAAIAAAAAAAAAQAAQAABAAAA=</HashCode>
+      <FileName>GUI\OrdersControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.GUI.PortfolioControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAAEAAAgAAAABAAAAAAgAAAEAAQIAAAgBAAAA=</HashCode>
+      <FileName>GUI\PortfolioControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.GUI.RobotControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>GUI\RobotControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.GUI.TradesNumericLabelAsksProvider" Collapsed="true">
+    <Position X="15.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\TradesControl.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.GUI.TradesNumericLabelBidsProvider" Collapsed="true">
+    <Position X="17" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\TradesControl.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.GUI.TradesControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAiABSAIAAAAAAgAiQiABQBAAAAgSAAQAAAAAAA=</HashCode>
+      <FileName>GUI\TradesControl.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.MVVM.DelegateCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>MVVM\DelegateCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.MVVM.ObservableObject">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\ObservableObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Trader.Network.BinanceServer" Collapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAEACQKAAMIAAQAAAIAAgAQAAEAgggJFCIcUjEgAkAA=</HashCode>
+      <FileName>Network\BinanceServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Network.ServersManager" Collapsed="true">
+    <Position X="25.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wCEACQKBAEIQIQMAQIMAkAAAAgAgggJMSIcUjEgAkAA=</HashCode>
+      <FileName>Network\ServersManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Network.TestServer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAEACQKAQNIIQQAEAIAAAAQIAEAgAgJECIcUjEgCkAA=</HashCode>
+      <FileName>Network\TestServer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.Network.TinkoffServer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAUESQKAAMIAIYEAAIAKBCUgQNBgAoNFCIcUiEiokEQ=</HashCode>
+      <FileName>Network\TinkoffServer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CommonReflection" Collapsed="true">
+    <Position X="22.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.MoneyValue" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAACCYEgAAIAQAACEEQAIAgEAAAAAAIAFA=</HashCode>
+      <FileName>Network\Contracts\Common.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Quotation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAACCYEgAAAAQAAAEEQAIAgEAAAAAAIABA=</HashCode>
+      <FileName>Network\Contracts\Common.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Ping" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAAAAAEEAAIAgAAAAAAAgARA=</HashCode>
+      <FileName>Network\Contracts\Common.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.InstrumentsReflection" Collapsed="true">
+    <Position X="15.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.TradingSchedulesRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAgBmAEAAICYEgAAAAAgAAEEIAIAhAAAQAAAAEBA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.TradingSchedulesResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAADYEgAAAAAAAAkEAAIAgAAAQAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.TradingSchedule" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAkCiAEIAICYEgAAAAAAAAEEAAIAgQAAQAAAAEBA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.TradingDay" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAkAgAqAEAAACZEsABBAAAAYENgAIAhgAAAAAAAADI=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.InstrumentRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAiAgAiAEAABCYMgAAAAAAAAFEAAICgAAAAAAAAA1A=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.InstrumentsRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAAAAAEEAAIAgAAAAggAAABQ=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.BondResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAkAiAEAAACYEgAAAAAAACUEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.BondsResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiEEAAADYEoIAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CurrencyResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAkAiAEAAACYEgAAAAAAACUEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CurrenciesResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiEEAAADYEoIAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.EtfResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAkAiAEAAACYEgAAAAAAACUEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.EtfsResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiEEAAADYEoIAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.FutureResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAkAiAEAAACYEgAAAAAAACUEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.FuturesResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiEEAAADYEoIAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.ShareResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAkAiAEAAACYEgAAAAAAACUEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SharesResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiEEAAADYEoIAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Bond" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oIowIgKiinYQeSYutoE4MR0FKdlN2KAgdSKzis2IsVI=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Currency" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAgwIgCignYQeCYupIEoExwFKVlNCKAgZSCwgsAIMVA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Etf" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>LAgwIkCiinZQeCYupIkoExwlKVldCKAwZSDwgsAIMVA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Future" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAgwIgCqynQQeCYupAMoERwlaPlNCOAhZyCwguAIMVA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Share" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAgwIgCminYQeCYutIEoMxwFKVlNCKAgZaCzgsAIMVE=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetAccruedInterestsRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAgDmgEAAACYEgAAAAAgAAEFIAIAhAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetAccruedInterestsResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEIAACYEgAAAAAAQAkEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.AccruedInterest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgEgAqAEAACCYEgAAAAAQAAEGAAqAhAAAgAAAAADA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetFuturesMarginRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCigEAAACYEgAAAAAAAAEFAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetFuturesMarginResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAwAgAiAGAAASYkgAAAkAAAAEEABICgAAAAgACAARA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.InstrumentResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAkAiAEAAACYEgAAAAAAACUEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Instrument" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAgwIgCignYQeCYupIEoERwFKVlNCKAgZWCwgsBIMVA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetDividendsRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAgDmgEAAACYEgAAAAAgAAEFIAIAhAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetDividendsResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAjAEAAACYEgAAAAAAAAEEAAIAgAAAAAAAAJFA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Dividend" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SBEoAxAigEkAACZNgCCAAAAgIEFACKAsIAEAQAAAABA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.InstrumentsService" Collapsed="true">
+    <Position X="18.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GgQCEAECAEAAAIIQhwBGAQBIBAEAAlEEAAUCCFCIgAA=</HashCode>
+      <FileName>Network\Contracts\InstrumentsGrpc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.MarketdataReflection" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.MarketDataRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEEgACYEgAAEAEAAAEEAoIAwgIABAAAAAJA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.MarketDataResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAgIkAiAEEAACYEgEAABAAFCEEAgIImCMCAAABAAJA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SubscribeCandlesRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiEEAAADYEoKAAAAAAAEEAAIAgAEAAAACAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CandleInstrument" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCigEAAACYEgIAABACAAEFAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SubscribeCandlesResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACZEgAAAgAgAAEEAEIAgAAAAAAAAQDA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CandleSubscription" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgQgCigEAAAC4kgIAABACAAEFAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SubscribeOrderBookRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiEEAAADYEoKAAAAAAAEEAAIAgAEAAAACAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OrderBookInstrument" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCigEAAACYEgAAAAAAAAEFAEIAgAAAAIAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SubscribeOrderBookResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgIiAEAAACZEgAAAgAAAAEEAEIAgAAAAAAAAQBA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OrderBookSubscription" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgQgCigEAAAC4kgAAAAAAAAEFAEIAgAAAAIAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SubscribeTradesRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiEEAAADYEoKAAAAAAAEEAAIAgAEAAAACAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.TradeInstrument" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCigEAAACYEgAAAAAAAAEFAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SubscribeTradesResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwAiAiAEAAACYEgAAAgAAAAEEAEIAhAAAAAQAAQBA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.TradeSubscription" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgQgCigEAAAC4kgAAAAAAAAEFAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SubscribeInfoRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiEEAAADYEoKAAAAAAAEEAAIAgAEAAAACAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.InfoInstrument" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCigEAAACYEgAAAAAAAAEFAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SubscribeInfoResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBgAiAcAAACaEgAAAgAAAAEEAEIAgAAAAAAAAQBA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.InfoSubscription" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgQgCigEAAAC4kgAAAAAAAAEFAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Candle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQgCgCigEAAICYEgoEAFACBAElACIAgQIIAAACgARA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OrderBook" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAgCigUAAACYEgAAACJAIAEFAMYAgQAEAIAAgARA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Order" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAhAgAiAUAACCYEgAAAAAAAAEEAAICgAAAAgAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Trade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAhAgCigUAACCYEgCAAAAAAAEFAAICgAEACgAAgARA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.TradingStatus" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCigEAAACYEgAAAAAQAAEFEAIAgAAAAAAggARA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetCandlesRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAgDmgEAAACYEgIAABAiAAEFIAIAhAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetCandlesResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEIAACYEgAAAAAAAAEEAQIAwAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.HistoricCandle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQgCgCiAEAAIiYEggEAEAABAEkACIAgQIIAAACgARA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetLastPricesRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCigEAAACYEgAAAAAAAAEFQAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetLastPricesResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAgAiAEAAACYEgAAAAAAAAEEAAIIgAQAAAAAAABQ=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.LastPrice" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAhAgCigUAACCYEgAAAAAAAAEFAAIAgAAAAAAAgARA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetOrderBookRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCigEAAACYEgAAAAAAAAEFAEIAgAAAAIAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetOrderBookResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAhCigUIAACYMgAAACJAIAEFAMIAgQAAAIAAAAFA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetTradingStatusRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCigEAAACYEgAAAAAAAAEFAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetTradingStatusResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgIgCigEAAACYEgAAAAAABAEFEAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.MarketDataService" Collapsed="true">
+    <Position X="15.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAEIQAAIAQUACAACAAAAAAAgAAMUAAEAAAAA=</HashCode>
+      <FileName>Network\Contracts\MarketdataGrpc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.MarketDataStreamService" Collapsed="true">
+    <Position X="17" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAAAAAEAAAAAAAAACAAEAAAAAAAAAAAUAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\MarketdataGrpc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OperationsReflection" Collapsed="true">
+    <Position X="31" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OperationsRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAgDmgEAAACYEggAAgAgAAEFIAIAlBAAABAAgABA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OperationsResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAhAgAiAEAAACYEkAAAAAAAAEEAAIAgAABAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Operation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QRAjAgCqgWAECCYEqIAKoAAACkFQAIClAUBApABAAnA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PortfolioRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEggAAAAAAAEEAAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PortfolioResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAFAAAGZkgAgEAIiCgFEAIoFgAAAIBABhABA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PositionsRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEggAAAAAAAEEAAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PositionsResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwAwIiAEAQACaEgABAAAAAIkUIAIAgAsAAIACAUBA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.WithdrawLimitsRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEggAAAAAAAEEAAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.WithdrawLimitsResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwAgAiAEABACaEgABAAAAAAEEIAIAgA4AAAgCAUBA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PortfolioPosition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgAgCikEAAACYEgAUAAIgAAEPAIISgAEIAgABNEBA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PositionsSecurities" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCikEAAACYEgAhAAAAAAEFAAIAgAgAABACAABA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PositionsFutures" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgCikEAAACYEgAhAAAAAAEFAAIAgAgAABACAABA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OperationsService" Collapsed="true">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAoAAAAAAFgAAAIAAAQyAgAAAAAAAAAgAAVCAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\OperationsGrpc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OrdersReflection" Collapsed="true">
+    <Position X="25.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.TradesStreamRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.TradesStreamResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAggAgAiAEEAACYEgEAAAAAAAEEAgIAgAICAAAEAAJA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OrderTrades" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UCAgAgCigEAAACYEgCAAAAAAIEFIgIIwAEACAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OrderTrade" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAhAgAiAUAACCYEgAAAAAAABEGAAISgAAAAgAAAABA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PostOrderRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ESAhAgCigUAACCYEgiAAAAAAAEFIAICgBMACgAAgBBA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PostOrderResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UKAgAoCygcMwBCYFxiCQQQBAAUFsAIAkEMACZACAhJA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CancelOrderRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAgAgAiAEAAACYEggAAAAAAAEEIAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CancelOrderResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAAAAAEEAAIAgAAAAAAAgARA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetOrderStateRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAgAgAiAEAAACYEggAAAAAAAEEIAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetOrdersRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEggAAAAAAAEEAAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetOrdersResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAwAiAEAAACYEgAAAAAAAAEEAAIAgAAIAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OrderState" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>WCBgAoCiwcs4RCYFxiCIQYAACUXsAIAkEMgCRAAGhNA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OrderStage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAhAgAiAUABCCYEgAAAAAAAAEEAAKSgAAAAgAAAABA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OrdersStreamService" Collapsed="true">
+    <Position X="29.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAEgAAAAAAAACAAAAAAAAAAAAAAUAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\OrdersGrpc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OrdersService" Collapsed="true">
+    <Position X="27.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEEAAAABkEAAAQAAQACCAAAEgAAACAAAAUAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\OrdersGrpc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SandboxReflection" Collapsed="true">
+    <Position X="22.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Sandbox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OpenSandboxAccountRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Sandbox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.OpenSandboxAccountResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEggAAAAAAAEEAAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Sandbox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CloseSandboxAccountRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEggAAAAAAAEEAAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Sandbox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CloseSandboxAccountResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Sandbox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SandboxPayInRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAgCYEggAAAACQAEEAAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Sandbox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SandboxPayInResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiEEAAACYEgAgAAAAAAEEAAIAgAAAABAAAABA=</HashCode>
+      <FileName>Network\Contracts\Sandbox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.SandboxService" Collapsed="true">
+    <Position X="24" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEsEQAAARlAAIEAACCQaCAAAEkAIACBAAAcCCAAABGA=</HashCode>
+      <FileName>Network\Contracts\SandboxGrpc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.StopordersReflection" Collapsed="true">
+    <Position X="13.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PostStopOrderRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAlIkCigUAgCCYEoiAAAABAQENAAMCgBEACghAgADA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.PostStopOrderResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAkAAAEFAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetStopOrdersRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEggAAAAAAAEEAAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetStopOrdersResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgIgAiAEAAACYEgAAAAAAAAEEgIIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CancelStopOrderRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEggAAAkAAAEFAAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.CancelStopOrderResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAAAAAEEAAIAgAAAAAAAgARA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.StopOrder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAhAkCigUIQCiYEoiAIAkAACEFAAIIgAMADAgAgBFA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.StopOrdersService" Collapsed="true">
+    <Position X="15.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAEAAAAAAEBAAAAAkAACAAAAAAAIAAAIAAUAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\StopordersGrpc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.UsersReflection" Collapsed="true">
+    <Position X="10" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetAccountsRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetAccountsResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAEAAAAAMEAAICgAAAAAAAAABQ=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.Account" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAmAgAmIGAIACYEoAAAAEwAAkEAAIAgQQAAAAAAIxA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetMarginAttributesRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEggAAAAAAAEEAAIAgBAAAAAAgABA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetMarginAttributesResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiCEAAASYkgABAIAAAAEEAAYAgAAEAoBABSBA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetUserTariffRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetUserTariffResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQgAgAigEIAACYMgAAACAAAAEEAAIAgQAgAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.UnaryLimit" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEEgIgAiAEAAACYEgAAAIAAAAGEAAIAgCAAAAAAAAFA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.StreamLimit" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAhAgAiIEAAQCYEgAAAAYAAAEEAAIAoAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetInfoRequest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAiAEAAACYEgAAAAAAAAEEAAIAgAAAAAAAAABA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.GetInfoResponse" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgBiAEAAACaEgAAAIgAAAEEAAIAgEEAAAEAAIBA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Tinkoff.InvestApi.V1.UsersService" Collapsed="true">
+    <Position X="11.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAJA0EAQEAAAgACKAAAAAAAAIAAAAAcAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\UsersGrpc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Properties.Resources" Collapsed="true">
+    <Position X="13.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Properties.Settings" Collapsed="true">
+    <Position X="27.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Utils.Config" Collapsed="true">
+    <Position X="25.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAIAAAAAAAAAAAAAKAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Utils.Convertor" Collapsed="true">
+    <Position X="29.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAACAAAAAAAAEEABAQAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Convertor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.Utils.Loger" Collapsed="true">
+    <Position X="27.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAABAABAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\Loger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.AccountsControlViewItem" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEIAAAAAAAAAAAAEQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AccountsControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.AccountsControlViewModel" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AccountsControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.BaseChartPaneViewModel" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACTAAAIYBYSAAEAAAYIIAAAAAAAAACBCABAAAAgAAAA=</HashCode>
+      <FileName>ViewModels\Chart\BaseChartPaneViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Trader.ViewModels.ChartControlViewModel" Collapsed="true">
+    <Position X="17" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hDWACiACARAMgkKABAAAEACAQGLIICAAAAFUAAIBAAA=</HashCode>
+      <FileName>ViewModels\Chart\ChartControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.MacdPaneViewModel" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAABACAAAAAAAAAAAAARAAACAAEAgAABA=</HashCode>
+      <FileName>ViewModels\Chart\MacdPaneViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.PricePaneViewModel" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAABAAQAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Chart\PricePaneViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.RsiPaneViewModel" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Chart\RsiPaneViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.VolumePaneViewModel" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Chart\VolumePaneViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.InstrumentsViewModelItem" Collapsed="true">
+    <Position X="22.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oIIAIoAACCQwSQAGJAggMhQgaZhBgCAgxMAQgAkAgQM=</HashCode>
+      <FileName>ViewModels\InstrumentsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.InstrumentsViewModel" Collapsed="true">
+    <Position X="20.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAAhAAAAAAAAABAAAAgAAYAAADAAAACoAAAAAAAAAgg=</HashCode>
+      <FileName>ViewModels\InstrumentsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.OperationsControlViewModelItem" Collapsed="true">
+    <Position X="29.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAIAAQAAAAAAAIAAIAAACgBAAAABAUBAhAAAAAA=</HashCode>
+      <FileName>ViewModels\OperationsControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.OperationsControlViewModel" Collapsed="true">
+    <Position X="27.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAQAAAgAAIAAAAwACQBAAAAAAAQAAAAAQAgA=</HashCode>
+      <FileName>ViewModels\OperationsControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.OrdersControlViewModelItem" Collapsed="true">
+    <Position X="24" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBCEAAEAIIABAAARCAAAQAACQDAAAAFAQgAAAAAAAA=</HashCode>
+      <FileName>ViewModels\OrdersControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.OrdersControlViewModel" Collapsed="true">
+    <Position X="22.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\OrdersControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.PortfolioControlViewModel">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="Trader.ViewModels.PortfolioControlViewModel.PortfolioControlViewModelTopInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\PortfolioControlViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Trader.ViewModels.PortfolioControlViewModel.PortfolioControlViewModelPosition" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ViewModels\PortfolioControlViewModel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAACAgAQBAAAAAAAAACAAAAAAAAgAAACA=</HashCode>
+      <FileName>ViewModels\PortfolioControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.RobotControlViewModel" Collapsed="true">
+    <Position X="17" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\RobotControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trader.ViewModels.DecToValueConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>ViewModels\ValueConverters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.ViewModels.StringToValueConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>ViewModels\ValueConverters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.ViewModels.CurrencyToValueConverter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>ViewModels\ValueConverters.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Trader.ViewModels.Chart.StockChartHelper" Collapsed="true">
+    <Position X="10" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAIAAAAAAAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Chart\StockChartHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Trader.Network.IServer" Collapsed="true">
+    <Position X="10" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAEACQKAAIIAAQAAAIAAAAQAAEAgAgJECIcUiEgAkAA=</HashCode>
+      <FileName>Network\IServer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Trader.Entities.InstrumentType" Collapsed="true">
+    <Position X="18.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAACEAAAAAAAAAAAAACAAAAIAAAAEAAAA=</HashCode>
+      <FileName>Entities\TInstrument.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trader.Network.ServerMode" Collapsed="true">
+    <Position X="31" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAICAEAAAA=</HashCode>
+      <FileName>Network\TinkoffServer.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.SecurityTradingStatus" Collapsed="true">
+    <Position X="29.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAEABAABCAAABCQAAAABAAABCAABAAABAKAAEAIA=</HashCode>
+      <FileName>Network\Contracts\Common.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.InstrumentIdType" Collapsed="true">
+    <Position X="15.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.InstrumentStatus" Collapsed="true">
+    <Position X="17" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAQAA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.ShareType" Collapsed="true">
+    <Position X="32.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIQACABAAAAAAAQAAAIAAAAACAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Instruments.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.SubscriptionAction" Collapsed="true">
+    <Position X="15.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.SubscriptionInterval" Collapsed="true">
+    <Position X="17" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.SubscriptionStatus" Collapsed="true">
+    <Position X="18.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAEAAAAAAAggAAAAgAAAAAAACAAACQAAAA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.TradeDirection" Collapsed="true">
+    <Position X="20.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.CandleInterval" Collapsed="true">
+    <Position X="13.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABIAAAAAAAAACAAAAIAAAAAAIAAAEAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Marketdata.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.OperationState" Collapsed="true">
+    <Position X="20.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAgAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.OperationType" Collapsed="true">
+    <Position X="22.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIUAADBKgEgFAIgQAAIgBCoEgAACAAIEAQAYAARgGE=</HashCode>
+      <FileName>Network\Contracts\Operations.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.OrderDirection" Collapsed="true">
+    <Position X="24" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.OrderType" Collapsed="true">
+    <Position X="27.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.OrderExecutionReportStatus" Collapsed="true">
+    <Position X="25.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAwABAAAAAAAAABAAQAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Orders.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.StopOrderDirection" Collapsed="true">
+    <Position X="10" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.StopOrderExpirationType" Collapsed="true">
+    <Position X="11.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.StopOrderType" Collapsed="true">
+    <Position X="13.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIACAABAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Stoporders.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.AccountType" Collapsed="true">
+    <Position X="11.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAwAABAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Tinkoff.InvestApi.V1.AccountStatus" Collapsed="true">
+    <Position X="10" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAICAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Network\Contracts\Users.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
