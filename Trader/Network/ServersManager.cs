@@ -215,13 +215,13 @@ namespace Trader.Network
             if (CurrentServer != null) await CurrentServer.GetLastPrices(instruments, figis);
         }
         // Candles
-        public async Task<List<TCandle>> GetCandles(string figi, DateTime b, DateTime e, CandleInterval ci)
+        public async Task<List<TCandle>> GetCandles(string figi, DateTime b, DateTime e)
         {
-            return (CurrentServer == null)? null : await CurrentServer.GetCandles(figi, b, e, ci);
+            return (CurrentServer == null)? null : await CurrentServer.GetCandles(figi, b, e);
         }
-        public void SubscribeCandle(string figi, SubscriptionInterval interval, SubscriptionAction action)
+        public void SubscribeCandle(string figi, SubscriptionAction action)
         {
-            if (CurrentServer != null) CurrentServer.SubscribeCandle(figi, interval, action);
+            if (CurrentServer != null) CurrentServer.SubscribeCandle(figi, action);
         }
         // OrderBook
         public void SubscribeOrderBook(string figi, int Depth, SubscriptionAction action)

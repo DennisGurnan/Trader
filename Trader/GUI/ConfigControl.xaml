@@ -113,8 +113,25 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <GroupBox Header="Основной график">
+                    <GroupBox Header="Скалер" Grid.Row="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Ширина свечи" Grid.Row="0" Grid.Column="0"/>
+                            <ComboBox Name="ScalerSelector" Grid.Row="0" Grid.Column="1" SelectionChanged="ScalerSelector_SelectionChanged">
+                                <ComboBoxItem Content="1 min"/>
+                                <ComboBoxItem Content="5 min"/>
+                                <ComboBoxItem Content="15 min"/>
+                                <ComboBoxItem Content="30 min"/>
+                                <ComboBoxItem Content="60 min"/>
+                            </ComboBox>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Основной график" Grid.Row="1">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -131,7 +148,7 @@
                             <TextBox Text="{Binding HiLine, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1"/>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="MCAD" Grid.Row="1">
+                    <GroupBox Header="MCAD" Grid.Row="2">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -150,7 +167,7 @@
                             <TextBox Text="{Binding MACDSignal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1"/>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="RSI" Grid.Row="2">
+                    <GroupBox Header="RSI" Grid.Row="3">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>

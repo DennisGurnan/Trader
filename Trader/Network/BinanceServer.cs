@@ -196,35 +196,37 @@ namespace Trader.Network
         }
         #endregion
         #region Свечи
-        private KlineInterval ConvertInterval(CandleInterval i)
+        private KlineInterval ConvertInterval(TCandleInterval i)
         {
             switch (i)
             {
-                case CandleInterval._1Min:
+                case TCandleInterval._1min:
                     return KlineInterval.OneMinute;
-                case CandleInterval._5Min:
+                case TCandleInterval._5min:
                     return KlineInterval.FiveMinutes;
-                case CandleInterval._15Min:
+                case TCandleInterval._15min:
                     return KlineInterval.FifteenMinutes;
-                case CandleInterval.Hour:
+                case TCandleInterval._30min:
+                    return KlineInterval.ThirtyMinutes;
+                case TCandleInterval._60min:
                     return KlineInterval.OneHour;
-                case CandleInterval.Day:
+                case TCandleInterval._day:
                     return KlineInterval.OneDay;
                 default:
                     return KlineInterval.OneMinute;
             }
         }
-        async public Task<List<TCandle>> GetCandles(string figi, DateTime b, DateTime e, CandleInterval ci)
+        async public Task<List<TCandle>> GetCandles(string figi, DateTime b, DateTime e)
         {
             var l = (e - b).TotalMinutes;
             WebCallResult<IEnumerable<IBinanceKline>> response;
             List<TCandle> candles = new List<TCandle>();
             if (l <= 500)
             {
-                response = await client.Spot.Market.GetKlinesAsync(figi, ConvertInterval(ci), b, e);
+                response = await client.Spot.Market.GetKlinesAsync(figi, ConvertInterval(TCandleInterval._1min), b, e);
                 foreach (var i in response.Data)
                 {
-                    TCandle m = new TCandle(i, ci);
+                    TCandle m = new TCandle(i, TCandleInterval._1min);
                     candles.Add(m);
                 }
                 return candles;
@@ -233,20 +235,20 @@ namespace Trader.Network
             {
                 for(DateTime s = b; s < e; s = s.AddMinutes(500))
                 {
-                    response = await client.Spot.Market.GetKlinesAsync(figi, ConvertInterval(ci), s, s.AddMinutes(500));
+                    response = await client.Spot.Market.GetKlinesAsync(figi, ConvertInterval(TCandleInterval._1min), s, s.AddMinutes(500));
                     foreach (var i in response.Data)
                     {
-                        TCandle m = new TCandle(i, ci);
+                        TCandle m = new TCandle(i, TCandleInterval._1min);
                         candles.Add(m);
                     }
                 }
             }
             return candles;
         }
-        async public void SubscribeCandle(string figi, SubscriptionInterval interval, SubscriptionAction action)
+        async public void SubscribeCandle(string figi, SubscriptionAction action)
         {
             var response = await socketClient.Spot.SubscribeToKlineUpdatesAsync(figi, KlineInterval.OneMinute, (date => {
-                TCandle candle = new TCandle(date.Data.Data, CandleInterval._1Min);
+                TCandle candle = new TCandle(date.Data.Data, TCandleInterval._1min);
                 StreamCandleRequestedEvent?.Invoke(candle);
             }));
         }

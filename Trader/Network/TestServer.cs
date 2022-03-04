@@ -119,16 +119,16 @@ namespace Trader.Network
         #endregion
         #region Candles
         private bool candlesSubscribed;
-        async public Task<List<TCandle>> GetCandles(string figi, DateTime b, DateTime e, CandleInterval ci)
+        async public Task<List<TCandle>> GetCandles(string figi, DateTime b, DateTime e)
         {
             int num = (int) (e - b).TotalMinutes / 5;
             IEnumerable<PriceBar> s = MarketService.GetHistoricalData(num);
             _5MinPirces = new List<TCandle>();
             List<TCandle> c = new List<TCandle>();
-            foreach (PriceBar p in s) { c.Add(new TCandle(p, ci)); _5MinPirces.Add(new TCandle(p, ci)); }
+            foreach (PriceBar p in s) { c.Add(new TCandle(p, TCandleInterval._1min)); _5MinPirces.Add(new TCandle(p, TCandleInterval._1min)); }
             return c;
         }
-        public void SubscribeCandle(string figi, SubscriptionInterval interval, SubscriptionAction action)
+        public void SubscribeCandle(string figi, SubscriptionAction action)
         {
             if (action == SubscriptionAction.Subscribe) candlesSubscribed = true;
             else candlesSubscribed = false;

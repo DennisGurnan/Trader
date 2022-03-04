@@ -32,6 +32,23 @@ namespace Trader.Utils
             }
         }
 
+        public Config (string p, string n)
+        {
+            path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            path += "\\" + p + "\\";
+            if (!Directory.Exists(path)) Directory.CreateDirectory(path);
+            path += n + ".cfg";
+            doc = new XmlDocument();
+            if (!File.Exists(path))
+            {
+                doc.LoadXml("<xml><body></body></xml>");
+            }
+            else
+            {
+                doc.Load(path);
+            }
+        }
+
         #region string
         public string GetVal(string key, string val = "")
         {

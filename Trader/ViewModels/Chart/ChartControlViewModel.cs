@@ -37,7 +37,7 @@ namespace Trader.ViewModels
                 Candles.SetFigi(_figi, BeginDate, DateTime.Now, SelectedCandleInterval);
             }
         }
-        public TCandles Candles;
+        public TCandleFactory Candles;
         private DateTime _beginDate;
         public DateTime BeginDate
         {
@@ -47,19 +47,16 @@ namespace Trader.ViewModels
                 _beginDate = value;
                 if (!string.IsNullOrEmpty(_figi))
                 {
-                    Candles.SelectCandles(_beginDate, DateTime.Now, SelectedCandleInterval);
+                    //Candles.SelectCandles(_beginDate, DateTime.Now, SelectedCandleInterval);
                     int index = Candles.GetDataIndex(BeginDate);
-                    XVisibleRange = new IndexRange(index, Candles.TimeData.Count - 1);
+                    XVisibleRange = new IndexRange(index, Candles.CurrentCandles.CandleData.Count - 1);
                 }
             }
         }
-
+        public PricePaneViewModel PricePanel;
         public ChartControlViewModel()
         {
-            Candles = new TCandles();
-            Candles.ChangedEvent += OnCandlesChanged;
-            Candles.UpdateEvent += OnLastCandleUpdate;
-
+            Candles = new TCandleFactory();
             ZoomModeCommand = new ActionCommand(SetZoomMode);
             PanModeCommand = new ActionCommand(SetPanMode);
             ZoomExtentsCommand = new ActionCommand(ZoomExtends);
@@ -67,13 +64,14 @@ namespace Trader.ViewModels
             StrokeThicknesses = new[] { 1, 2, 3 };
             CandleIntervals = new[]
             {
-                CandleInterval._1Min,
-                CandleInterval._5Min,
-                CandleInterval._15Min,
-                CandleInterval.Hour,
-                CandleInterval.Day
+                TCandleInterval._1min,
+                TCandleInterval._5min,
+                TCandleInterval._15min,
+                TCandleInterval._30min,
+                TCandleInterval._60min,
+                TCandleInterval._day
             };
-            SelectedCandleInterval = CandleInterval._1Min;
+            SelectedCandleInterval = TCandleInterval._1min;
             SeriesStyles = new[] { "OHLC", "Candlestick", "Line", "Mountain" };
             SelectedStrokeThickness = 1;
             SelectedSeriesStyle = "Candlestick";
@@ -81,19 +79,18 @@ namespace Trader.ViewModels
             _verticalChartGroupId = Guid.NewGuid().ToString();
             _viewportManager = new DefaultViewportManager();
             var closePaneCommand = new ActionCommand<IChildPane>(pane => ChartPaneViewModels.Remove((BaseChartPaneViewModel)pane));
-
-            _chartPaneViewModels.Add(new PricePaneViewModel(this, Candles)
+            PricePanel = new PricePaneViewModel(this, Candles)
             {
                 IsFirstChartPane = true,
                 ViewportManager = _viewportManager
-            });
+            };
+            _chartPaneViewModels.Add(PricePanel);
             _chartPaneViewModels.Add(new MacdPaneViewModel(this, Candles)
             {
                 Title = "MACD",
                 ClosePaneCommand = closePaneCommand
 
             });
-
             _chartPaneViewModels.Add(new RsiPaneViewModel(this, Candles)
             {
                 Title = "RSI",
@@ -109,37 +106,10 @@ namespace Trader.ViewModels
             SetZoomMode();
         }
 
-
         public PricePaneViewModel GetPricePaneViewModel()
         {
             foreach (BaseChartPaneViewModel p in _chartPaneViewModels) if (p.GetType() == typeof(PricePaneViewModel)) return p as PricePaneViewModel;
             return null;
-        }
-
-        public MacdPaneViewModel GetMacdPaneViewModel()
-        {
-            foreach (BaseChartPaneViewModel p in _chartPaneViewModels) if (p.GetType() == typeof(MacdPaneViewModel)) return p as MacdPaneViewModel;
-            return null;
-        }
-
-        private void OnLastCandleUpdate()
-        {
-            lock (this)
-            {
-                foreach (BaseChartPaneViewModel m in _chartPaneViewModels) m.Update();
-            }
-        }
-
-        private void OnCandlesChanged()
-        {
-            lock (this)
-            {
-                if (Candles.Count > 0)
-                {
-                    foreach (BaseChartPaneViewModel b in _chartPaneViewModels) b.Reload();
-                    //XVisibleRange = new IndexRange(0, Candles.TimeData.Count - 1);
-                }
-            }
         }
 
         #region Interfaces
@@ -222,8 +192,8 @@ namespace Trader.ViewModels
                 OnPropertyChanged("SeriesViewModels");
             }
         }
-        private CandleInterval _SelectedCandleInterval;
-        public CandleInterval SelectedCandleInterval
+        private TCandleInterval _SelectedCandleInterval;
+        public TCandleInterval SelectedCandleInterval
         {
             get => _SelectedCandleInterval;
             set
@@ -232,12 +202,13 @@ namespace Trader.ViewModels
                 OnPropertyChanged("SelectedCandleInterval");
                 if (!string.IsNullOrEmpty(Figi))
                 {
-                    Candles.SelectCandles(_SelectedCandleInterval);
+                    Candles.CurrentCandleInterval = _SelectedCandleInterval;
+                    foreach (BaseChartPaneViewModel m in _chartPaneViewModels) m.Refresh();
                 }
             }
         }
         public IEnumerable<string> SeriesStyles { get; }
-        public IEnumerable<CandleInterval> CandleIntervals { get; }
+        public IEnumerable<TCandleInterval> CandleIntervals { get; }
         public IEnumerable<int> StrokeThicknesses { get; }
 
         private void ZoomExtends()

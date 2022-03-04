@@ -93,7 +93,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Config.cs" />
+    <Compile Include="Entities\TCandles.cs" />
     <Compile Include="Entities\TMoney.cs" />
     <Compile Include="Entities\TNewsEvent.cs" />
     <Compile Include="Entities\TTrade.cs" />
@@ -101,7 +101,7 @@
     <Compile Include="MVVM\ObservableObject.cs" />
     <Compile Include="Entities\TAccount.cs" />
     <Compile Include="Entities\TAccounts.cs" />
-    <Compile Include="Entities\TCandles.cs" />
+    <Compile Include="Entities\TCandleFactory.cs" />
     <Compile Include="Entities\TInstrument.cs" />
     <Compile Include="Entities\TInstruments.cs" />
     <Compile Include="Entities\TOperation.cs" />
@@ -285,7 +285,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\" />
     <Folder Include="Robot\" />
   </ItemGroup>
   <ItemGroup>

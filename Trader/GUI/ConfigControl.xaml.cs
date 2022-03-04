@@ -13,6 +13,29 @@ namespace Trader.GUI
     public partial class ConfigControl : UserControl, INotifyPropertyChanged
     {
         public static ConfigControl Instance;
+        public Entities.TCandleInterval selectedInterval;
+        private Entities.TCandles currentCandles
+        {
+            get
+            {
+                if (ChartControl.Instance == null) return null;
+                if (ChartControl.Instance.Candles == null) return null;
+                switch (selectedInterval)
+                {
+                    case Entities.TCandleInterval._1min:
+                        return ChartControl.Instance.Candles._1min;
+                    case Entities.TCandleInterval._5min:
+                        return ChartControl.Instance.Candles._5min;
+                    case Entities.TCandleInterval._15min:
+                        return ChartControl.Instance.Candles._15min;
+                    case Entities.TCandleInterval._30min:
+                        return ChartControl.Instance.Candles._30min;
+                    case Entities.TCandleInterval._60min:
+                        return ChartControl.Instance.Candles._60min;
+                }
+                return null;
+            }
+        }
 
         public Utils.Config IO = new Utils.Config("config");
 
@@ -21,74 +44,78 @@ namespace Trader.GUI
         {
             get
             {
-                return IO.GetVal("Chart", "MACDFastVal", 0);
+                if (currentCandles != null) return currentCandles.MacdFast;
+                return 0;
             }
             set
             {
-                IO.SetVal("Chart", "MACDFastVal", value);
-                if(ChartControl.Instance != null) ChartControl.Instance.MacdFast = value;
-                OnPropertyChanged("MACDFastValStr");
+                if(currentCandles != null) currentCandles.MacdFast = value;
+                OnPropertyChanged("MACDFast");
             }
         }
         public int MACDSlow
         {
             get
             {
-                return IO.GetVal("Chart", "MACDSlowVal", 0);
+                if (currentCandles != null) return currentCandles.MacdSlow;
+                return 0;
             }
             set
             {
-                IO.SetVal("Chart", "MACDSlowVal", value);
-                if (ChartControl.Instance != null) ChartControl.Instance.MacdSlow = value;
-                OnPropertyChanged("MACDSlowValStr");
+                if (currentCandles != null) currentCandles.MacdSlow = value;
+                OnPropertyChanged("MACDSlow");
             }
         }
         public int MACDSignal
         {
             get
             {
-                return IO.GetVal("Chart", "MACDSignalVal", 0);
+                if (currentCandles != null) return currentCandles.MacdSignal;
+                return 0;
             }
             set
             {
-                IO.SetVal("Chart", "MACDSignalVal", value);
-                ChartControl.Instance.MacdSignal = value;
+                if (currentCandles != null) currentCandles.MacdSignal = value;
+                OnPropertyChanged("MACDSignal");
             }
         }
         public int RsiPeriod
         {
             get
             {
-                return IO.GetVal("Chart", "RsiPeriod", 0);
+                if (currentCandles != null) return currentCandles.RsiPeriod;
+                return 0;
             }
             set
             {
-                IO.SetVal("Chart", "RsiPeriod", value);
-                ChartControl.Instance.RsiPeriod = value;
+                if (currentCandles != null) currentCandles.RsiPeriod = value;
+                OnPropertyChanged("RsiPeriod");
             }
         }
         public int LoLine
         {
             get
             {
-                return IO.GetVal("Chart", "LoLine", 0);
+                if (currentCandles != null) return currentCandles.LoSteps;
+                return 0;
             }
             set
             {
-                IO.SetVal("Chart", "LoLine", value);
-                ChartControl.Instance.LoValue = value;
+                if (currentCandles != null) currentCandles.LoSteps = value;
+                OnPropertyChanged("LoLine");
             }
         }
         public int HiLine
         {
             get
             {
-                return IO.GetVal("Chart", "HiLine", 0);
+                if (currentCandles != null) return currentCandles.HiSteps;
+                return 0;
             }
             set
             {
-                IO.SetVal("Chart", "HiLine", value);
-                ChartControl.Instance.HiValue = value;
+                if (currentCandles != null) currentCandles.HiSteps = value;
+                OnPropertyChanged("HiLine");
             }
         }
         #endregion
@@ -182,6 +209,35 @@ namespace Trader.GUI
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
+        }
+
+        private void ScalerSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if ((sender as ComboBox).SelectedItem == null) return;
+            switch(((sender as ComboBox).SelectedItem as ComboBoxItem).Content)
+            {
+                case "1 min":
+                    selectedInterval = Entities.TCandleInterval._1min;
+                    break;
+                case "5 min":
+                    selectedInterval = Entities.TCandleInterval._5min;
+                    break;
+                case "15 min":
+                    selectedInterval = Entities.TCandleInterval._15min;
+                    break;
+                case "30 min":
+                    selectedInterval = Entities.TCandleInterval._30min;
+                    break;
+                case "60 min":
+                    selectedInterval = Entities.TCandleInterval._60min;
+                    break;
+            }
+            OnPropertyChanged("MACDFast");
+            OnPropertyChanged("MACDSlow");
+            OnPropertyChanged("MACDSignal");
+            OnPropertyChanged("RsiPeriod");
+            OnPropertyChanged("LoLine");
+            OnPropertyChanged("HiLine");
         }
     }
 }

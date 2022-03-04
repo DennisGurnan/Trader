@@ -35,7 +35,7 @@ namespace Trader.GUI
                 if (control != null) control.Figi = value;
             }
         }
-        public TCandles Candles
+        public TCandleFactory Candles
         {
             get
             {
@@ -48,43 +48,48 @@ namespace Trader.GUI
         {
             get
             {
-                if (Candles != null) return Candles.MacdSlow;
+                if (Candles != null) return Candles.CurrentCandles.MacdSlow;
                 return 0;
             }
             set
             {
-                if (Candles != null) { Candles.MacdSlow = value; Candles.SelectCandles(); }
+                if (Candles != null) { Candles.CurrentCandles.MacdSlow = value; }
             }
         }
         public int MacdFast
         {
             get
             {
-                if (Candles != null) return Candles.MacdFast;
+                if (Candles != null) return Candles.CurrentCandles.MacdFast;
                 return 0;
             }
             set
             {
-                if (Candles != null) { Candles.MacdFast = value; Candles.SelectCandles(); }
+                if (Candles != null) { Candles.CurrentCandles.MacdFast = value; }
             }
         }
         public int MacdSignal
         {
             get
             {
-                if (Candles != null) return Candles.MacdSignal;
+                if (Candles != null) return Candles.CurrentCandles.MacdSignal;
                 return 0;
             }
             set
             {
-                if (control != null) { Candles.MacdSignal = value; Candles.SelectCandles(); }
+                if (control != null) { Candles.CurrentCandles.MacdSignal = value; }
             }
         }
         public MacdPoint LastMacdPoint
         {
             get
             {
-                if (Candles != null) return Candles.MacdData.Last();
+                if (Candles != null) return new MacdPoint()
+                {
+                    Macd = Candles.CurrentCandles.MacdData.YValues.Last(),
+                    Signal = Candles.CurrentCandles.MacdData.Y1Values.Last(),
+                    Divergence = Candles.CurrentCandles.HistogramData.YValues.Last()
+                };
                 return new MacdPoint();
             }
         }
@@ -93,12 +98,12 @@ namespace Trader.GUI
         {
             get
             {
-                if (Candles != null) return Candles.RsiPeriod;
+                if (Candles != null) return Candles.CurrentCandles.RsiPeriod;
                 return 0;
             }
             set
             {
-                if (control != null) { Candles.RsiPeriod = value; Candles.SelectCandles(); }
+                if (control != null) { Candles.CurrentCandles.RsiPeriod = value; }
             }
         }
         // Hi/Lo
@@ -106,24 +111,24 @@ namespace Trader.GUI
         {
             get
             {
-                if (Candles != null) return Candles.LoValue;
+                if (Candles != null) return Candles.CurrentCandles.LoSteps;
                 return 0;
             }
             set
             {
-                if (control != null) { Candles.LoValue = value; Candles.SelectCandles(); }
+                if (control != null) { Candles.CurrentCandles.LoSteps = value; }
             }
         }
         public int HiValue
         {
             get
             {
-                if (Candles != null) return Candles.HiValue;
+                if (Candles != null) return Candles.CurrentCandles.HiSteps;
                 return 0;
             }
             set
             {
-                if (control != null) { Candles.HiValue = value; Candles.SelectCandles(); }
+                if (control != null) { Candles.CurrentCandles.HiSteps = value; }
             }
         }
 
@@ -144,19 +149,19 @@ namespace Trader.GUI
         #region Annotations
         public void CreateTradeAnnotation(TTrade trade)
         {
-            control.GetPricePaneViewModel().CreateTradeAnnotation(trade);
+            control.PricePanel.CreateTradeAnnotation(trade);
         }
         public void CreateNewsAnnotation(TNewsEvent newsEvent)
         {
-            control.GetPricePaneViewModel().CreateNewsAnnotation(newsEvent);
+            control.PricePanel.CreateNewsAnnotation(newsEvent);
         }
         public StepAnnotationViewModel CreateStepAnnotation()
         {
-            return control.GetPricePaneViewModel().CreateStepAnnotation();
+            return control.PricePanel.CreateStepAnnotation();
         }
         public void ClearAnnotations()
         {
-            control.GetPricePaneViewModel().ClearAnnotations();
+            control.PricePanel.ClearAnnotations();
         }
         #endregion
 

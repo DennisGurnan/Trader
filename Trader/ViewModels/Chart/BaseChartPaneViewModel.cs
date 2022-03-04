@@ -35,8 +35,7 @@ namespace Trader.ViewModels
         private bool _isFirstChartPane;
         private bool _isLastChartPane;
         private double _height = double.NaN;
-        public TCandles Candles;
-        public TCandle _LastCandle;
+        public TCandleFactory Candles;
 
         #region Annotations
         private ObservableCollection<IAnnotationViewModel> _annotations;
@@ -81,7 +80,7 @@ namespace Trader.ViewModels
         }
         #endregion
 
-        protected BaseChartPaneViewModel(ChartControlViewModel parentViewModel, TCandles candles)
+        protected BaseChartPaneViewModel(ChartControlViewModel parentViewModel, TCandleFactory candles)
         {
             _chartSeriesViewModels = new ObservableCollection<IRenderableSeriesViewModel>();
             _parentViewModel = parentViewModel;
@@ -89,6 +88,8 @@ namespace Trader.ViewModels
             Candles = candles;
             TradeAnnotations = new ObservableCollection<IAnnotationViewModel>();
         }
+
+        virtual public void Refresh() { }
 
         public ChartControlViewModel ParentViewModel
         {
@@ -101,13 +102,6 @@ namespace Trader.ViewModels
         }
 
         public IViewportManager ViewportManager { get; set; }
-
-        public virtual void Update()
-        {
-
-        }
-
-        public virtual void Reload() { }
 
         public string YAxisTextFormatting
         {

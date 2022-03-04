@@ -72,8 +72,8 @@ namespace Trader.GUI
                 }
                 if (ChartControl.Instance.Candles != null)
                 {
-                    DateTime d = ChartControl.Instance.Candles.TimeData.FindLast(x => x <= CurrentDate);
-                    currentDateIndex = ChartControl.Instance.Candles.TimeData.IndexOf(d);
+                    DateTime d = ChartControl.Instance.Candles.CurrentCandles.CandleData.XValues.Last(x => x <= CurrentDate);
+                    currentDateIndex = ChartControl.Instance.Candles.CurrentCandles.CandleData.XValues.IndexOf(d);
                 }
                 else currentDateIndex = - 1;
 
@@ -122,15 +122,15 @@ namespace Trader.GUI
                 if (ChartControl.Instance.Candles != null)
                 {
                     if (currentDateIndex < 0) return 0;
-                    if (ChartControl.Instance.Candles.RsiData.Count == 0) return 0;
-                    return ChartControl.Instance.Candles.RsiData[currentDateIndex];
+                    if (!ChartControl.Instance.Candles.CurrentCandles.RsiData.HasValues) return 0;
+                    return ChartControl.Instance.Candles.CurrentCandles.RsiData.YValues[currentDateIndex];
                 }
                 else return 0;
             }
         }
         public double currentVolume
         {
-            get => ((ChartControl.Instance.Candles == null) || (currentDateIndex < 0)) ? 0 : ChartControl.Instance.Candles.VolumeData[currentDateIndex];
+            get => ((ChartControl.Instance.Candles == null) || (currentDateIndex < 0)) ? 0 : ChartControl.Instance.Candles.CurrentCandles.VolumeData.YValues[currentDateIndex];
         }
         public MacdPoint currentMacdPoint
         {
@@ -139,18 +139,23 @@ namespace Trader.GUI
                 if (ChartControl.Instance.Candles != null)
                 {
                     if (currentDateIndex < 0) return new MacdPoint() { Signal = 0, Divergence = 0, Macd = 0 };
-                    return ChartControl.Instance.Candles.MacdData[currentDateIndex];
+                    return new MacdPoint()
+                    {
+                        Macd = ChartControl.Instance.Candles.CurrentCandles.MacdData.YValues[currentDateIndex],
+                        Signal = ChartControl.Instance.Candles.CurrentCandles.MacdData.Y1Values[currentDateIndex],
+                        Divergence = ChartControl.Instance.Candles.CurrentCandles.HistogramData.YValues[currentDateIndex]
+                    };
                 }
                 else return new MacdPoint() { Signal = 0, Divergence = 0, Macd = 0 };
             }
         }
         public double currentHiVal
         {
-            get => ((ChartControl.Instance.Candles == null) || (currentDateIndex < 0)) ? 0 : ChartControl.Instance.Candles.HiLineData[currentDateIndex];
+            get => ((ChartControl.Instance.Candles == null) || (currentDateIndex < 0)) ? 0 : ChartControl.Instance.Candles.CurrentCandles.HighLineData.YValues[currentDateIndex];
         }
         public double currentLowVal
         {
-            get => ((ChartControl.Instance.Candles == null)||(currentDateIndex < 0))?0:ChartControl.Instance.Candles.LoLineData[currentDateIndex];
+            get => ((ChartControl.Instance.Candles == null)||(currentDateIndex < 0))?0:ChartControl.Instance.Candles.CurrentCandles.LowLineData.YValues[currentDateIndex];
 
         }
         public double currentPrice
@@ -158,8 +163,8 @@ namespace Trader.GUI
             get
             {
                 int ind = currentDateIndex;
-                return (ind >= 0)?(ChartControl.Instance.Candles.OpenData[ind]
-                    + ChartControl.Instance.Candles.CloseData[ind]) / 2:0;
+                return (ind >= 0)?(ChartControl.Instance.Candles.CurrentCandles.CandleData.OpenValues[ind]
+                    + ChartControl.Instance.Candles.CurrentCandles.CandleData.CloseValues[ind]) / 2:0;
             }
         }
         // Операнды
@@ -207,10 +212,11 @@ namespace Trader.GUI
         }
         private void FindIn()
         {
-            if ((currentLowVal + currentHiVal + currentPrice) == 0) return;
             double cl = currentLowVal;
             double ch = currentHiVal;
             double cp = currentPrice;
+            if (cp == ccp) return;
+            ccp = cp;
             if (cl > ch) return;
             if(lastLowVal == 0)
             {
@@ -242,25 +248,30 @@ namespace Trader.GUI
                 };
                 ChartControl.Instance.CreateTradeAnnotation(trade);
                 State = StateMachine.FindOut;
+                ccp = cp;
             }
         }
-
+        private double ccp;
+        private double lastCP;
         private void FindOut()
         {
-            if ((currentLowVal + currentHiVal + currentPrice) == 0) return;
             double ch = currentHiVal;
             double cl = currentLowVal;
             double cp = currentPrice;
-            if (ch > cl)
+            if (lastCP == cp) return;
+            if ((ch > cl)&&(ccp<cp))
             {
                 lastLowVal = cl;
+                lastCP = cp;
                 return;
             }
             if(lastLowVal < cl)
             {
                 lastLowVal = cl;
+                lastCP = cp;
                 return;
             }
+            if (((ccp > cp)&&(LowPersent(ccp,cp) < 0.5))||(lastCP < cp)||(LowPersent(cp, lastLowVal) < 0.2)) return;
             TTrade trade = new TTrade()
             {
                 BuySell = Tinkoff.InvestApi.V1.OrderDirection.Sell,

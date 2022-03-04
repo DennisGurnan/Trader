@@ -35,8 +35,8 @@ namespace Trader.Network
         public Task FillInstruments(TInstruments instruments);
         public Task GetLastPrices(TInstruments instruments, string[] figis = null);
         // Candles
-        public Task<List<TCandle>> GetCandles(string figi, DateTime b, DateTime e, CandleInterval ci);
-        public void SubscribeCandle(string figi, SubscriptionInterval interval, SubscriptionAction action);
+        public Task<List<TCandle>> GetCandles(string figi, DateTime b, DateTime e);
+        public void SubscribeCandle(string figi, SubscriptionAction action);
         // OrderBook
         public void SubscribeOrderBook(string figi, int Depth, SubscriptionAction action);
         // Orders

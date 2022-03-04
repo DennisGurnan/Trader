@@ -663,7 +663,7 @@ namespace Trader.Network
         #endregion
 
         #region Свечи
-        public async Task<List<TCandle>> GetCandles(string figi, DateTime b, DateTime e, CandleInterval ci)
+        public async Task<List<TCandle>> GetCandles(string figi, DateTime b, DateTime e)
         {
             try
             {
@@ -672,7 +672,7 @@ namespace Trader.Network
                     Figi = figi,
                     From = b.ToUniversalTime().ToTimestamp(),
                     To = e.ToUniversalTime().ToTimestamp(),
-                    Interval = ci
+                    Interval = CandleInterval._1Min
                 };
                 GetCandlesResponse response = await marketDataServiceClient.GetCandlesAsync(request, headers);
                 List<TCandle> result = new List<TCandle>();
@@ -680,8 +680,8 @@ namespace Trader.Network
                 {
                     foreach (HistoricCandle c in response.Candles)
                     {
-                        TCandle i = new TCandle(c,ci);
-                        i.Interval = ci;
+                        TCandle i = new TCandle(c, TCandleInterval._1min);
+                        i.Interval = TCandleInterval._1min;
                         result.Add(i);
                     }
                 }
@@ -724,7 +724,7 @@ namespace Trader.Network
         }
 
         // Подписка на свечу
-        public async void SubscribeCandle(string figi, SubscriptionInterval interval, SubscriptionAction action)
+        public async void SubscribeCandle(string figi, SubscriptionAction action)
         {
             try
             {
@@ -733,7 +733,7 @@ namespace Trader.Network
                 marketStreamRequest.SubscribeCandlesRequest = new SubscribeCandlesRequest()
                 {
                     SubscriptionAction = action,
-                    Instruments = { new CandleInstrument() { Figi = figi, Interval = interval } }
+                    Instruments = { new CandleInstrument() { Figi = figi, Interval = SubscriptionInterval.OneMinute } }
                 };
                 await stream.RequestStream.WriteAsync(marketStreamRequest);
                 _StreamLocked = false;
@@ -829,7 +829,7 @@ namespace Trader.Network
                     }
                     if(stream.ResponseStream.Current.Candle != null)
                     {
-                        StreamCandleRequestedEvent?.Invoke(new TCandle(stream.ResponseStream.Current.Candle, CandleInterval._1Min));
+                        StreamCandleRequestedEvent?.Invoke(new TCandle(stream.ResponseStream.Current.Candle, TCandleInterval._1min));
                     }
                     if(stream.ResponseStream.Current.Trade != null)
                     {
